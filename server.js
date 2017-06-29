@@ -25,12 +25,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
+
+//going to use express in public folder
 app.use(express.static('public'));
 
-require('./app/routing/htmlRoutes.js');
+require('./app/routing/htmlRoutes.js')(app);
 require('./app/routing/apiRoutes.js');
 
 app.listen(PORT, function(){
 
-    console.log('Server Listening on %d', PORT)
+    console.log('Server Listening on', PORT)
 });

@@ -5,3 +5,31 @@
 //     A POST routes /api/friends. This will be used to handle
 //     incoming survey results. This route will also be used to handle the
 //     compatibility logic.
+
+var cookies = require('../data/cookies.js');
+var path = require('path');
+
+//server.js is going to grab this function
+module.export = function(app) {
+
+    app.get("/api/cookies", function (req, res) {
+
+        res.json(cookies);
+        
+    });
+    //pulling information from app.js
+    /* app.post("/api/cookies", function(req, res) {
+        console.log("req.body.name: " + req.body.name);
+        console.log("req.body.score.length" + req.body.score.length);
+
+        for (let i = 0; i < cookies.length; i++) {
+            const differArray = [];
+            const totalDiff = 0;
+
+            for (let j =0; j <cookie[i].length; j++) {
+                differArray.push (Math.abs ( req.body.score[j] - cookies[i].scorees[j]))
+            }
+
+        }
+    )};*/
+};

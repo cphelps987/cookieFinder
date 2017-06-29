@@ -2,9 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cookie Finder</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <script type="javascript" src="app.js"></script>
+
 </head>
 <body>
+    <div class="container">
+        <h1>Find out what kind of cookie you are!</h1>
+        <br>
+        <h2>Welcome, what is your name?</h2>
+        <label for="name">Name (Required)</label>
+        <input type="text" class="form-control" id="name">
 
+        <br>
+        <h2>Survey Questions</h2>
+
+        <div id="survey">
+            <div>
+                <h3>Question 1</h3>
+                <h4>What kind of Milk do you like?</h4>
+                <label class="radio-inline"><input type="radio" name="q1" value="1">whole</label>
+                <label class="radio-inline"><input type="radio" name="q1" value="2">skim</label>
+                <label class="radio-inline"><input type="radio" name="q1" value="3">half/half</label>
+                <label class="radio-inline"><input type="radio" name="q1" value="4">2 percent</label>
+                <label class="radio-inline"><input type="radio" name="q1" value="5">almond</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 2</h3>
+                <h4>How do you eat your Oreo?</h4>
+                <label class="radio-inline"><input type="radio" name="q2" value="1">twist & chomp</label>
+                <label class="radio-inline"><input type="radio" name="q2" value="2">dunk & chomp</label>
+                <label class="radio-inline"><input type="radio" name="q2" value="3">twist & dunk & chomp</label>
+                <label class="radio-inline"><input type="radio" name="q2" value="4">one bite - duh</label>
+                <label class="radio-inline"><input type="radio" name="q2" value="5">nibble forever</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 3</h3>
+                <h4>Pick a Dad</h4>
+                <label class="radio-inline"><input type="radio" name="q3" value="1">homer (simpson)</label>
+                <label class="radio-inline"><input type="radio" name="q3" value="2">rob stark (game of thrones)</label>
+                <label class="radio-inline"><input type="radio" name="q3" value="3">darht vadar (star wars)</label>
+                <label class="radio-inline"><input type="radio" name="q3" value="4">coach taylor (friday night lights)</label>
+                <label class="radio-inline"><input type="radio" name="q3" value="5">bill cosby (cosby show)</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 4</h3>
+                <h4>What kind of Milk do you like?</h4>
+                <label class="radio-inline"><input type="radio" name="q4" value="1">whole</label>
+                <label class="radio-inline"><input type="radio" name="q4" value="2">skim</label>
+                <label class="radio-inline"><input type="radio" name="q4" value="3">half/half</label>
+                <label class="radio-inline"><input type="radio" name="q4" value="4">2 percent</label>
+                <label class="radio-inline"><input type="radio" name="q4" value="5">almond</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 5</h3>
+                <h4>How do you sleep at night?</h4>
+                <label class="radio-inline"><input type="radio" name="q5" value="1">on my side</label>
+                <label class="radio-inline"><input type="radio" name="q5" value="2">on my back</label>
+                <label class="radio-inline"><input type="radio" name="q5" value="3">on my stomach</label>
+                <label class="radio-inline"><input type="radio" name="q5" value="4">on a pile of money</label>
+                <label class="radio-inline"><input type="radio" name="q5" value="5">i do not</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 6</h3>
+                <h4>How many tabs do you have open - right now?</h4>
+                <label class="radio-inline"><input type="radio" name="q6" value="1">1 - obviously this quiz</label>
+                <label class="radio-inline"><input type="radio" name="q6" value="2">2</label>
+                <label class="radio-inline"><input type="radio" name="q6" value="3">3</label>
+                <label class="radio-inline"><input type="radio" name="q6" value="4">4</label>
+                <label class="radio-inline"><input type="radio" name="q6" value="5">5+</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 7</h3>
+                <h4>Pick an animal you relate to?</h4>
+                <label class="radio-inline"><input type="radio" name="q7" value="1">monkey</label>
+                <label class="radio-inline"><input type="radio" name="q7" value="2">lion</label>
+                <label class="radio-inline"><input type="radio" name="q7" value="3">cat</label>
+                <label class="radio-inline"><input type="radio" name="q7" value="4">pig</label>
+                <label class="radio-inline"><input type="radio" name="q7" value="5">penguin</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 8</h3>
+                <h4>Favorite room temperature (degrees)?</h4>
+                <label class="radio-inline"><input type="radio" name="q8" value="1">70 and below</label>
+                <label class="radio-inline"><input type="radio" name="q8" value="2">71</label>
+                <label class="radio-inline"><input type="radio" name="q8" value="3">72</label>
+                <label class="radio-inline"><input type="radio" name="q8" value="4">73</label>
+                <label class="radio-inline"><input type="radio" name="q8" value="5">74 and above</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 9</h3>
+                <h4>Best first date?</h4>
+                <label class="radio-inline"><input type="radio" name="q9" value="1">dinner and a movie</label>
+                <label class="radio-inline"><input type="radio" name="q9" value="2">something adventurous</label>
+                <label class="radio-inline"><input type="radio" name="q9" value="3">picnic in the park</label>
+                <label class="radio-inline"><input type="radio" name="q9" value="4">theme park</label>
+                <label class="radio-inline"><input type="radio" name="q9" value="5">netflix and chill</label>
+            </div>
+            <br>
+            <div>
+                <h3>Question 10</h3>
+                <h4>Birthday Month?</h4>
+                <label class="radio-inline"><input type="radio" name="q10" value="1">Jan-Feb</label>
+                <label class="radio-inline"><input type="radio" name="q10" value="2">Mar-May</label>
+                <label class="radio-inline"><input type="radio" name="q10" value="3">June-July</label>
+                <label class="radio-inline"><input type="radio" name="q10" value="4">August-Sept</label>
+                <label class="radio-inline"><input type="radio" name="q10" value="5">Oct-Dec</label>
+            </div>
+            <br>
+            <div class = "col-md-12">
+                <input type="submit" class="btn btn-primary" id="submit">
+            </div>
+        </div><!--end of survey-->
+    </div><!--end of container-->
+
+<!--picture of what cookie you are here-->
 </body>
 </html>
