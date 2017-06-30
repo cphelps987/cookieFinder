@@ -12,6 +12,7 @@ You must have a package.json file with dependancies.*/
 const bodyParser = require("body-parser");
 const express = require("express");
 const path = require("path");
+const mysql = require("mysql");
 
 //creating port to deploy site
 const PORT = process.env.PORT || 8080;
@@ -27,10 +28,10 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 //going to use express in public folder
-app.use(express.static('public'));
+app.use(express.static('app/public'));
 
 require('./app/routing/htmlRoutes.js')(app);
-require('./app/routing/apiRoutes.js');
+require('./app/routing/apiRoutes.js')(app);
 
 app.listen(PORT, function(){
 

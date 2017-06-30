@@ -2,19 +2,21 @@
 $(document).on("click", '#submit', function() {
     console.log("clicked");
 
+//console.log("Bob")
+
     if ($('#name').val().trim() == '') {
         alert("Please Enter Your Name!");
-        return;
+
     };
 
-    var answerArray = [];
+    let answerArray = [];
 
-    for (var i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 10; i++) {
         //console.log("i", i)
         if ($("input:radio[name=q" + i + "]:checked").val() == null) {
-            alert("Survey not completed"); //works
+            //alert("Survey not completed"); //works
             console.log("User did not finish survey")
-            return;
+
         } else {
             answerArray.push($("input:radio[name=q" + i + "]:checked").val());
             console.log("User finished survey")
@@ -32,20 +34,22 @@ $(document).on("click", '#submit', function() {
     //making sure the user input is validated and stored in an object along with the "score"
     console.log("answer object", answerObject);
 
-
-    var currentURL = window.location.origin;
+});
+  /*  var currentURL = window.location.origin;
+    console.log(currentURL);
 
     //sending back the data to the serve via post calling it data
 
-    $.post("/api/cookies", answerObject, function(data) {
+    $.post("/api", answerObject, function(data) {
 
         console.log("name:", data.name);
-    });
+    });*/
 
     //clearing input data after it is posted to the server
+/*
 
     $("#name").val('');
     $("input:radio").attr("checked", false);
-    return false;
+*/
 
-});
+
